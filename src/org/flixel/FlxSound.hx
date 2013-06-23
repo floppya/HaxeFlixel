@@ -506,7 +506,7 @@ class FlxSound extends FlxBasic
 	 */
 	private function startSound(Position:Float):Void
 	{
-		var numLoops:Int = (_looped && (Position == 0)) ? 9999 : 0;
+		var numLoops:Int = (_looped && (Position == 0)) ? -1 : 0;
 		_position = Position;
 		_paused = false;
 		_channel = _sound.play(_position, numLoops, _transform);
